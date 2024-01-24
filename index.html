@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini game</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+      *{font-family: 'VT323', monospace;}
+      button {
+          background-color: chocolate;
+          cursor: pointer;
+      }
+      button:hover {
+          background-color: rgb(140, 77, 14);
+      }
+    </style>
+  </head>
+  <body>
+      <!-- ceci est le div principal afin de generer notre zone de combat -->
+      <div style="position: relative; display: inline-block;">
+      <div id="combat" style="background-color: rgb(0, 0, 0); width: 100% ; height:100%; position: absolute; pointer-events: none; opacity:0 ; z-index: 10; color:black; text-align: center; font-size: 100px;" > you win!!</div>
+      
+      <!-- div qui permet au joueur d'attaquer -->
+      <div id="information_display">
+          <div style = "background-color: chocolate; position: absolute; bottom: 0; height: 25%; right: 0; left: 0; border: 4px solid; display: flex; justify-content: space-around; gap:0;"> 
+              <button id="button" style="width: 33%;">gifle celeste</button>
+              <button id="button2" style="width: 33%;">prout ancestrale</button>
+
+          </div>
+          <div style="background-color: bisque; position: absolute; height: 10%; width: 30%; margin-top: 5%; margin-left: 5%; top:0;">
+              <p style="font-size: large; margin-left: 3%;"> feuille moche</p>
+              <div id="gifle" style = "margin-left: 10px;height: 10%;width: 90%;background-color: green; border-radius: 10px;"></div>
+          </div>
+          <div style="background-color: bisque; position: absolute; height: 10%; width: 30%; margin-top: 420px; margin-left: 60%; top:0;">
+              <p style="font-size: large; margin-left: 3%;"> flamme qui brule pas</p>
+              <div style = "margin-left: 10px;height: 10%;width: 90%;background-color: green; border-radius: 10px;"></div>
+          </div>
+      </div>
+
+      <canvas> </canvas>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>
